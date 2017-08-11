@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>文字列を連結する関数</title>
+</head>
+<body>
+    <script>
+        // function f(x, y) {
+        //     arguments[0] = 3;
+        //     console.log("x = " + x + ", y = " + y );
+        // }
+        // f(1, 2);
+
+        function myConcat(separator) {
+            var s = "";
+            for (var i = 0; i < arguments.length; i++) {
+                if (i == 0) { continue; }
+                s += arguments[i];
+                console.log(s);
+                if ( i < arguments.length - 1) {
+                    console.log(s);
+                    s += separator;
+                }
+            }
+            return s;
+        }
+        console.log(myConcat("/", "dog", "cat", "tiger", "bird"));
+    </script>
+</body>
+</html>
