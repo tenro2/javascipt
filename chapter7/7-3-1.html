@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScriptの練習</title>
+</head>
+<body>
+    <script>
+		// 二分探索
+		function binarySearch(x, a) {
+			var n = a.length;
+			var left = 0;
+			var right = n - 1;
+			while ( left < right) {
+				var middle = Math.floor((left + right) / 2)
+				if ( x <= a[middle]) {
+					right = middle;
+				} else {
+					left = middle + 1;
+				}
+			}
+			if (x == a[right]) {
+				return right;
+			}
+			return null;
+		}
+
+		var a = [2, 4, 7, 12, 15, 21, 34, 35, 46, 57, 70];
+		console.log(binarySearch(35, a));
+    </script>
+</body>
+</html>
