@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>関数宣言文と関数リテラル</title>
+</head>
+<body>
+    <script>
+        // 関数宣言文の関数は巻き上げが可能であるが、関数リテラルによる巻き上げは不可
+        //https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/function
+
+        // 関数宣言文 その1
+        function f (x, y) {
+            console.log("x = " + x + ", y = " + y );
+        }
+        f(1, 2);
+
+        // 関数宣言文 その2
+        g(3, 4);
+        function g (x, y) {
+            console.log("x = " + x + ", y = " + y );
+        }
+
+
+        // 関数リテラル その1
+        var h = function(x, y) {
+            console.log("x = " + x + ", y = " + y );
+        }
+        h(5, 6);
+
+        // 関数リテラル その1
+        i(7, 8);
+        var i = function(x, y) {
+            console.log("x = " + x + ", y = " + y );
+        }
+    </script>
+</body>
+</html>
