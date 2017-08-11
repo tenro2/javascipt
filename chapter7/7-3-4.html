@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>配列の要素の合計を求める</title>
+</head>
+<body>
+    <script>
+        function sumArray(a) {
+            var sum = 0;
+            for (var i = 0; i < a.length; i++) {
+                sum += a[i];
+            }
+            return sum;
+        }
+        var a = [3, 5, 10, 3];
+        console.log(sumArray(a));
+    </script>
+</body>
+</html>
