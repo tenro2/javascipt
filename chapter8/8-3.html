@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>論理和演算子と三行演算子</title>
+</head>
+<body>
+    <script>
+        function multiply(a, b) {
+            // b = b || 3;
+            b = (b) ? b : 3
+            return a * b;
+        }
+        console.log(multiply(5));
+    </script>
+</body>
+</html>
