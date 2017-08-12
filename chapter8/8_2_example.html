@@ -7,27 +7,26 @@
 <body>
     <script>
         // 教科書の例
-        function myConcat(separator) {
-            var s = "";
-            for (var i = 0; i < arguments.length; i++) {
-                if (i == 0) { continue; }
-                s += arguments[i];
-                console.log(s);
-                if ( i < arguments.length - 1) {
-                    console.log(s);
-                    s += separator;
-                }
-            }
-            return s;
-        }
-        console.log(myConcat("/", "dog", "cat", "tiger", "bird"));
+        // function myConcat(separator) {
+        //     var s = "";
+        //     for (var i = 0; i < arguments.length; i++) {
+        //         s += arguments[i];
+        //         console.log(s);
+        //         if ( i < arguments.length - 1) {
+        //             console.log(s);
+        //             s += separator;
+        //         }
+        //     }
+        //     return s;
+        // }
+        // console.log(myConcat("/", "dog", "cat", "tiger", "bird"));
 
         // 修正例
         function myConcat(separator) {
             var s = "";
             for (var i = 0; i < arguments.length; i++) {
-                if (i == 0) { continue; }
-                s += arguments[i];
+                if (i == 0) { continue; } // 追加
+                    s += arguments[i];
                 console.log(s);
                 if ( i < arguments.length - 1) {
                     console.log(s);
