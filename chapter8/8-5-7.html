@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>論理和演算子と三行演算子</title>
+</head>
+<body>
+    <script>
+        var a = "A";
+        function f() {
+            var b = "B";
+            function g() {
+                var c = "C";
+                console.log(a + b + c);
+            }
+            g();
+        }
+        console.log(f());
+    </script>
+</body>
+</html>
