@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>カウンタ変数を作る関数</title>
+</head>
+<body>
+    <script>
+        function makeCounter() {
+            var count = 0;
+            return f;
+            function f() {
+                return count++;
+            }
+        }
+        var counter = makeCounter();
+
+        console.log(counter());
+        console.log(counter());
+        console.log(counter());
+
+    </script>
+</body>
+</html>
