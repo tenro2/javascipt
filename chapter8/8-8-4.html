@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>apply method and call method</title>
+</head>
+<body>
+    <script>
+        function say(greetings, honorifitics) {
+            console.log(greetings + " " + honorifitics + this.name);
+        }
+        var tom = { name : "Tom Sawyer"};
+        var sayToTom = say.bind(tom);
+        sayToTom("Hello", "Mr.");
+    </script>
+</body>
+</html>
