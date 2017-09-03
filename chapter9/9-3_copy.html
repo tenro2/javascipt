@@ -6,7 +6,7 @@
 </head>
 <body>
     <script>
-        // プロトタイプベースのオブジェクト指向言語
+        // ECMA Script 5
         var objA = {
             name: "Tom",
             sayHello: function() { console.log("Hello! " + this.name) }
@@ -19,10 +19,10 @@
         objC.__proto__ = objB;
         objC.sayHello();
 
-        // ECMA Script 6から導入されたクラス構文
+        // ECMA Script 6
         class Person {
             constructor (name) {
-                this.name = name;   
+                this.name = name;
             }
             get name() {
                 return this._name;
