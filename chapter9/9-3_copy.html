@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>9-3</title>
+</head>
+<body>
+    <script>
+        // プロトタイプベースのオブジェクト指向言語
+        var objA = {
+            name: "Tom",
+            sayHello: function() { console.log("Hello! " + this.name) }
+        };
+        var objB = {
+            name: "Bob",
+        };
+        objB.__proto__ = objA;
+        objC = {};
+        objC.__proto__ = objB;
+        objC.sayHello();
+
+        // ECMA Script 6から導入されたクラス構文
+        class Person {
+            constructor (name) {
+                this.name = name;   // メンバ変数
+            }
+            get name() {
+                return this._name;
+            }
+            set name(value) {   
+                return this._name = value;
+            }
+            sayHello () {
+                console.log("Hello! " + this.name)
+            }
+        }
+
+        var person = new Person("Bob");
+        person.sayHello();
+    </script>
+</body>
+</html>

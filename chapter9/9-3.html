@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>9-3</title>
+</head>
+<body>
+    <script>
+        // プロトタイプ継承
+        // プロトタイプベースのオブジェクト指向言語
+        // https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
+        var objA = {
+            name: "Tom",
+            sayHello: function() { console.log("Hello! " + this.name) }
+        };
+        var objB = {
+            name: "Bob",
+        };
+        objB.__proto__ = objA;
+        objC = {};
+        objC.__proto__ = objB;
+        objC.sayHello();
+
+        // ECMA Script 6から導入されたクラス構文
+        // https://html5experts.jp/takazudo/17355/
+        class Person {
+            // コンストラクタによる初期化
+            constructor (name) {
+                this.name = name;   // メンバ変数
+            }
+            // プロトタイプのメソッド。アクセッサを記述する
+            get name() {    // getキーワード（ゲッター）
+                return this._name;
+            }
+            set name(value) {   // setキーワード（セッター）
+                return this._name = value;
+            }
+            sayHello () {
+                console.log("Hello! " + this.name)
+            }
+        }
+
+        var person = new Person("Bob");
+        person.sayHello();
+    </script>
+</body>
+</html>
