@@ -9,17 +9,22 @@
         window.onload = function() {
             // XMLHttpRequestオブジェクトを生成
             var req = new XMLHttpRequest();
-            // サーバーとの通信時の処理方法を登録
+            サーバーとの通信時の処理方法を登録
             req.onreadystatechange = function() {
+                // 受信完了（全てのレスポンスを取得済み）
                 if (req.readyState == 4) {
                     if (req.status == 200) {
                         document.getElementById("view").innerHTML = req.responseText;
                     }
                 }
             };
+            // console.log("A: readyState = " + req.readyState);
+            // req.onreadystatechange = function() {
+            //     console.log("B: readyState = " + req.readyState);
+            // };
             req.open("GET", "data.txt");
             req.send(null);
-        }
+        };
     </script>
     <p id ="view"></p>
 </body>
