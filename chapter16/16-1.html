@@ -19,7 +19,11 @@
                 }
             };
 
-            req.open("GET", "index.html");
+            // req.addEventListener("loadstart", function() {
+            //     document.getElementById("view").innerHTML = "通信中";
+            // }, false);
+
+            req.open("GET", "data.txt");
             req.send(null);
         };
     </script>
