@@ -11,6 +11,8 @@
             var req = new XMLHttpRequest();
             // レスポンスの読み出し
             req.addEventListener("load", function() {
+                console.log(req);
+                console.log(req.reseponseText);
                 jsonObj = JSON.parse(req.reseponseText);
             }, false);
 
