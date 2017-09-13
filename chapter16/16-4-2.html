@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>apply method and call method</title>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            // XMLHttpRequestオブジェクトを生成
+            var req = new XMLHttpRequest();
+            // レスポンスの読み出し
+            req.addEventListener("load", function() {
+                console.log(req.responseText)
+                jsonObj = req.reseponse;
+            }, false);
+
+            req.open("GET", "data.json", true);
+            req.responseType = "json";
+            req.send(null);
+        };
+    </script>
+    <p id ="view"></p>
+</body>
+</html>

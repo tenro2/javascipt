@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>json response</title>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            // XMLHttpRequestオブジェクトを生成
+            var req = new XMLHttpRequest();
+            // レスポンスの読み出し
+            req.addEventListener("load", function() {
+                console.log(req.responseText);
+                console.log(JSON.parse(req.reseponseText));
+                jsonObj = JSON.parse(req.reseponseText);
+            }, false);
+
+            req.open("GET", "data.json", true);
+            req.send(null);
+        };
+    </script>
+    <p id ="view"></p>
+</body>
+</html>

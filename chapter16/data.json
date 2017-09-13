@@ -1,0 +1,15 @@
+{
+  "teamname": "Tigers",
+  "member" : 9,
+  "membername": {
+    "Toritani": [1, "thirdbaseman"],
+    "Yamato": [0, "secondbaseman"],
+    "Itoi": [7, "centerfielder"],
+    "Fukudome": [8,"rightfielder"],
+    "Nakatani": [60, "firstbaseman"],
+    "Itoh": [51, "leftfielder"],
+    "Hojyo": [2, "shortfielder"],
+    "Umeno": [44, "catcher"],
+    "Nomi": [14, "pitcher"],
+  }
+}
